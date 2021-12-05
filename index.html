@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperspeed</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <div id="info">
+        <h2 id="#title">Captain's log</h2>
+        <div class="divider"></div>
+        <p id="score-row" class="info-row">Score: <span id="score"></span></p>
+        <p id="distance-row" class="info-row">Distance: <span id="distance"></span></p>
+        <div class="divider"></div>
+        <div>Ship's Integrity</div>
+        <input type="range" id="health" min="0" max="50" disabled>
+    </div>
+
+    <div id="intro-panel" class="panel">
+        <h1 id="intro-title">Hyperspeed</h1>
+        <button class="option-btn" id="start-button">Start</button>
+    </div>
+
+    <div id="game-over-panel" class="panel">
+        <h1 id=game-over-title>Game Over!</h1>
+        <p id="game-over-score-row" class="info-row">Score: <span id="game-over-score"></span></p>
+        <p id="game-over-distance-row" class="info-row">Distance: <span id="game-over-distance"></span></p>
+    </div>
+
+    <script src="./vendors/three.min.js""></script>
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

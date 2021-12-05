@@ -1,0 +1,142 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+}
+
+canvas{
+    width: 100% !important;
+    height:95vh !important;
+    overflow: hidden !important;
+}
+
+p{
+    color: #fff;
+}
+
+#info{
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    border: 1px solid white;
+    padding: 0.5rem;
+    font-family: 'monospace';
+}
+
+.info-row{
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+#score, #distance{
+    margin-left: 0.5rem;
+}
+
+.divider{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin: 0.5rem 0;
+}
+
+#info, #title{
+    font-weight: bold;
+}
+
+#info #health {
+  height: 12px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+#info #health:focus {
+  outline: none;
+}
+
+/* Mozilla Firefox browser */
+#info #health::-moz-range-track {
+  width: 100%;
+  height: 12px;
+  background: #333333;
+}
+#info #health::-moz-range-thumb {
+  opacity: 0;
+}
+#info #health::-moz-range-progress {
+  height: 12px;
+  background: #4194e2;
+}
+
+/* Webkit-based browsers (Chrome, Brave, Edge, Safari) */
+#info #health::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  background: #333333;
+  overflow: hidden;
+}
+
+#info #health::-webkit-slider-runnable-track {
+  height: 12px;
+  -webkit-appearance: none;
+  background: #333333;
+  margin-top: -1px;
+}
+
+#info #health::-webkit-slider-thumb {
+  width: 0;
+  -webkit-appearance: none;
+  height: 12px;
+  cursor: ew-resize;
+  background: transparent;
+  box-shadow: -100px 0 0 100px #4194e2;
+}
+
+.panel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    font-family: monospace;
+    z-index: 10;
+    background-color: #000;
+}
+
+#intro-title{
+    font-size: 3rem;
+}
+
+.options{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.option-btn{
+    padding: 0.5rem 1rem;
+    border: 2px solid #fff;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#game-over-panel{
+    display: none;
+}
