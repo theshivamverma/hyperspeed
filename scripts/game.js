@@ -10,10 +10,11 @@ class Game {
     this.speedZ = 20;
     this.speedX = 0; // -1: left, 0: straight, 1: right
     this.translateX = 0;
-    this.health = 50;
+    this.health = 40;
     this.score = 0;
 
     this.running = false;
+    this.multiplayer = false;
 
     // html dom elements
     this.domHealth = document.getElementById('health')
@@ -25,9 +26,13 @@ class Game {
       document.getElementById('intro-panel').style.display = 'none'
     })
 
+     document.getElementById("start-button2").addEventListener("click", () => {
+       this.running = true;
+       this.multiplayer = true;
+       document.getElementById("intro-panel").style.display = "none";
+     });
+
     this.domGameOverPanel = document.getElementById("game-over-panel");
-    this.domGameOverScore = document.getElementById("game-over-score");
-    this.domGameOverDistance = document.getElementById("game-over-distance");
 
     // initialise dom elements
     this.domScore.innerText = this.score;
@@ -153,10 +158,31 @@ class Game {
     // prepare end state
     this.running = false;
     //  show "end state" UI
-    this.domGameOverPanel.style.display = 'flex';
-    this.domGameOverScore.innerText = this.score;
-    this.domGameOverDistance.innerText = this.objectsParent.position.z.toFixed(0);
-    //  reset instance variables for a new game
+    
+    
+    if(this.multiplayer === true){
+      this.domGameOverPanel.style.display = "flex";
+      if(!document.getElementById('scorespanel')){
+        this.domGameOverPanel.innerHTML = `
+        <h1>Game Over!</h1>
+        <h2>Scores</h2>
+        <div class="scorespanel" id="scorespanel"></div>
+        `;
+      }
+      submitScore(this.score, this.objectsParent.position.z.toFixed(0));
+    }else{
+      this.domGameOverPanel.style.display = "flex";
+      this.domGameOverPanel.innerHTML = `
+         <h1 id=game-over-title>Game Over!</h1>
+        <p id="game-over-score-row" class="info-row">Score: <span id="game-over-score">${
+          this.score
+        }</span></p>
+        <p id="game-over-distance-row" class="info-row">Distance: <span id="game-over-distance">${this.objectsParent.position.z.toFixed(
+          0
+        )}</span></p>
+      `;
+    }
+      
   }
 
   _createShip(scene) {

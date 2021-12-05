@@ -16,21 +16,56 @@
         <p id="distance-row" class="info-row">Distance: <span id="distance"></span></p>
         <div class="divider"></div>
         <div>Ship's Integrity</div>
-        <input type="range" id="health" min="0" max="50" disabled>
+        <input type="range" id="health" min="0" max="40" disabled>
     </div>
 
     <div id="intro-panel" class="panel">
         <h1 id="intro-title">Hyperspeed</h1>
-        <button class="option-btn" id="start-button">Start</button>
+        <div class="options" id="options-btn-container">
+            <button class="option-btn" id="create-game-button1">Create Game</button>
+            <button class="option-btn" id="join-game-button1">Join Game</button>
+            <button class="option-btn" id="start-button">Start Single Player</button>
+        </div>
+        <div class="game-form" id="create-game-form">
+            <div class="game-input-container">
+                <p>Game Room Name</p>
+                <input type="text" id="game-name" class="game-input" />
+            </div>
+            <div class="game-input-container">
+                <p>Player Name</p>
+            <input type="text" id="player-name" class="game-input" />
+            </div>
+            <button class="option-btn" id="create-game-button2">Create</button>
+        </div>
+        <div class="game-form" id="join-game-form">
+            <div class="game-input-container">
+                <p>Game Room Id</p>
+                <input type="text" id="game-id" class="game-input" />
+            </div>
+            <div class="game-input-container">
+                <p>Player Name</p>
+            <input type="text" id="player-name2" class="game-input" />
+            </div>
+            <button class="option-btn" id="join-game-button2">Join</button>
+        </div>
+         <div class="create-game-info" id="create-game-info">
+            <div class="game-header">
+                <p id="game-id-display">Game Id: </p>
+                <p id="game-name-display">Game Name:</p>
+                <button class="option-btn start2" id="start-button2">Start Game</button>
+            </div>
+            <div id="players-joined">
+                
+            </div>
+        </div>
     </div>
 
     <div id="game-over-panel" class="panel">
-        <h1 id=game-over-title>Game Over!</h1>
-        <p id="game-over-score-row" class="info-row">Score: <span id="game-over-score"></span></p>
-        <p id="game-over-distance-row" class="info-row">Distance: <span id="game-over-distance"></span></p>
+        
     </div>
 
     <script src="./vendors/three.min.js""></script>
+    <script src="./scripts/socket.js"></script>
     <script src="./scripts/game.js"></script>
     <script src="./scripts/script.js"></script>
 </body>

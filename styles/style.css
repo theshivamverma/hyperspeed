@@ -123,6 +123,7 @@ p{
     width: 60%;
     display: flex;
     justify-content: space-between;
+    margin-top: 3rem;
 }
 
 .option-btn{
@@ -132,11 +133,87 @@ p{
     text-transform: uppercase;
     font-size: 1.2rem;
     color: #fff;
-    margin-top: 3rem;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 1rem;
+}
+
+.game-form{
+    margin-top: 3rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-input-container{
+    margin-top: 0.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.game-input-container > input{
+    width: 50%;
+    background-color: black;
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+}
+
+#create-game-form, #join-game-form{
+    display: none;
+}
+
+#game-id-show, #game-id-display, #game-name-display{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.create-game-info{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center;
+    margin-top: 2rem;
+    display: none;
+}
+
+.game-header{
+     display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+#players-joined{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
 }
 
 #game-over-panel{
     display: none;
+}
+
+.scorespanel{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 2rem;
+    display: none;
+}
+
+.score-box{
+    padding: 0.5rem;
+    border: 1px solid #fff;
+}
+
+.score-box > h2{
+    color: #fff;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #fff;
 }
