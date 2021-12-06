@@ -9,6 +9,7 @@ let ws = new WebSocket("ws://hyperspeed-backend.herokuapp.com");
 const createGameBtn1 = document.getElementById("create-game-button1");
 const joinGameBtn1 = document.getElementById("join-game-button1");
 const optionsBtnContainer = document.getElementById("options-btn-container");
+const instruction = document.getElementById("instruction");
 
 const createGameForm = document.getElementById("create-game-form");
 const joinGameForm = document.getElementById("join-game-form");
@@ -29,11 +30,13 @@ const playersJoined = document.getElementById("players-joined");
 
 createGameBtn1.addEventListener("click", () => {
   optionsBtnContainer.style.display = "none";
+  instruction.style.display = "none";
   createGameForm.style.display = "flex";
 });
 
 joinGameBtn1.addEventListener("click", () => {
   optionsBtnContainer.style.display = "none";
+  instruction.style.display = "none"
   joinGameForm.style.display = "flex";
 });
 

@@ -217,3 +217,13 @@ p{
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #fff;
 }
+
+#instruction{
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.message{
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
