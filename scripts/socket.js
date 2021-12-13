@@ -2,7 +2,7 @@ let clientId = null;
 let clientName = null;
 let gameId = null;
 let gameName = null;
-let ws = new WebSocket("ws://hyperspeed-backend.herokuapp.com");
+let ws = new WebSocket("wss://hyperspeed-backend.herokuapp.com");
 // let ws = new WebSocket("ws://localhost:8080");
 
 
